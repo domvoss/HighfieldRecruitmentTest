@@ -1,0 +1,19 @@
+<h1 id="tableLabel">User colour Data</h1>
+
+<p *ngIf="!colourDatas"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="colourDatas">
+  <thead>
+    <tr>
+      <th>Colour Name</th>
+      <th>Number of Occurences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let colourData of colourDatas">
+      <td>{{ colourData.ColourName }}</td>
+      <td>{{ colourData.Quantity }}</td>
+    </tr>
+  </tbody>
+</table>
+
